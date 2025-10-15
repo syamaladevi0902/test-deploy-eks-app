@@ -18,7 +18,7 @@ jobs:
 
       - name: Build Docker image
         run: |
-          docker build -t syamaladuddugalla/test-deploy-eks-app:latest .
+          docker build -t syamaladuddugalla/test-deploy-eks-app:latest ./app
 
       - name: Push Docker image
         run: |
