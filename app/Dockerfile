@@ -4,7 +4,7 @@ WORKDIR /app
 # install build deps
 COPY app/requirements.txt .
 RUN pip install --user -r requirements.txt
-COPY . .
+COPY app/ .
 
 # Stage 2: runtime
 FROM python:3.12-slim
