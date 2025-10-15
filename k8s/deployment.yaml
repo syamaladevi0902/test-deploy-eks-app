@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: test-deploy-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: test-deploy-app
+  template:
+    metadata:
+      labels:
+        app: test-deploy-app
+    spec:
+      containers:
+      - name: app
+        image: DOCKER_IMAGE_PLACEHOLDER   # replace with your image (see below)
+        ports:
+        - containerPort: 5000
+        env:
+        - name: PORT
+          value: "5000"
